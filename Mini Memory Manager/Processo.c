@@ -1,0 +1,1 @@
+// Manipular dados dos processos
