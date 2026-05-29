@@ -5,4 +5,6 @@
 
 void mostrar_memoria();
 
+int alocar_memoria(int tamanho, int id);
+
 #endif

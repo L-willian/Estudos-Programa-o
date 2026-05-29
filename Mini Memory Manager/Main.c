@@ -10,7 +10,8 @@ int main()
 {
     // Menu de opções
     int opcao;
-
+    int tamanho;
+    int id = 1;
     do
     {
         printf("1. Criar processo\n");
@@ -25,12 +26,33 @@ int main()
         // Processar a opção escolhida
         switch (opcao)
         {
+        case 1:
+
+            // Criar processo
+            printf("Digite o tamanho do processo: ");
+
+            scanf("%d", &tamanho);
+            if (tamanho <= 0)
+            {
+                printf("Tamanho inválido. Tente novamente.\n");
+                break;
+            }
+            int inicio = alocar_memoria(tamanho, id);
+
+            if (inicio == -1)
+            {
+                printf("Memoria insuficiente.\n");
+            }
+            else
+            {
+                printf("Processo %d alocado no endereço %d.\n", id, inicio);
+                id++;
+            }
+
+            break;
 
         case 4:
             mostrar_memoria();
-            break;
-
-        default:
             break;
         }
     }
