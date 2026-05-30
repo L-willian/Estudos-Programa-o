@@ -13,6 +13,18 @@ typedef struct
 
     // Endereço de início da memória alocada
     int endereco;
+
+    // Status do processo (ativo ou inativo)
+    int ativo;
 } Processo;
+
+// Prototipo das funções
+void adicionar_processo(
+    int id,
+    int tamanho,
+    int endereco);
+
+// Lista de processos
+void listar_processos();
 
 #endif

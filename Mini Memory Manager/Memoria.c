@@ -48,9 +48,17 @@ int alocar_memoria(int tamanho, int id)
                 memoria[j] = id;
             }
             // Retorna o endereço de início da memória alocada
-            return i;
+            return inicio;
         }
     }
     // Retorna -1 se não houver espaço suficiente para alocar o processo
     return -1;
+}
+
+void inicializar_memoria()
+{
+    for (int i = 0; i < TAM_MEMORIA; i++)
+    {
+        memoria[i] = 0;
+    }
 }

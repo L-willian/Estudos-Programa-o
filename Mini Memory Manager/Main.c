@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "Memoria.h"
+#include "Processo.h"
 
 int main()
 {
@@ -12,6 +13,7 @@ int main()
     int opcao;
     int tamanho;
     int id = 1;
+    int inicio;
     do
     {
         printf("1. Criar processo\n");
@@ -37,7 +39,7 @@ int main()
                 printf("Tamanho inválido. Tente novamente.\n");
                 break;
             }
-            int inicio = alocar_memoria(tamanho, id);
+            inicio = alocar_memoria(tamanho, id);
 
             if (inicio == -1)
             {
@@ -45,10 +47,16 @@ int main()
             }
             else
             {
-                printf("Processo %d alocado no endereço %d.\n", id, inicio);
-                id++;
+                adicionar_processo(id, tamanho, inicio);
             }
+            printf("Processo %d alocado no endereço %d.\n", id, inicio);
+            id++;
 
+            break;
+
+        case 3:
+            // Listar Processos
+            listar_processos();
             break;
 
         case 4:
