@@ -9,6 +9,10 @@
 
 int main()
 {
+
+    // Inicializar a memória
+    inicializar_memoria();
+
     // Menu de opções
     int opcao;
     int tamanho;
@@ -48,8 +52,9 @@ int main()
             else
             {
                 adicionar_processo(id, tamanho, inicio);
+                printf("Processo %d alocado no endereço %d.\n", id, inicio);
             }
-            printf("Processo %d alocado no endereço %d.\n", id, inicio);
+
             id++;
 
             break;

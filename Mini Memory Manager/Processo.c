@@ -16,7 +16,13 @@ void adicionar_processo(
 {
 
     // Realocar memória para a nova lista de processos
-    processos = realloc(processos, (total_processos + 1) * sizeof(Processo));
+    Processo *temp = realloc(processos, (total_processos + 1) * sizeof(Processo));
+    if (temp == NULL)
+    {
+        printf("Erro ao realocar memória.\n");
+        return;
+    }
+    processos = temp;
 
     processos[total_processos].id = id;
     processos[total_processos].tamanho = tamanho;
@@ -36,7 +42,7 @@ void listar_processos()
     {
 
         printf("ID: %d\n", processos[i].id);
-        printf(" Tamanho: %d\n,", processos[i].tamanho);
+        printf(" Tamanho: %d\n", processos[i].tamanho);
         printf(" Endereço: %d\n", processos[i].endereco);
         printf(" Status: %s\n", processos[i].ativo ? "Ativo" : "Inativo");
         printf("-----------------\n");
