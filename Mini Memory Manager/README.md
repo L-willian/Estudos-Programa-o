@@ -249,7 +249,6 @@ Projeto educacional de sistemas operacionais
   </p>
 </h1>
 
-
 ## 📄 Licença
 
 Este projeto é fornecido como material educacional.
