@@ -27,4 +27,10 @@ void adicionar_processo(
 // Lista de processos
 void listar_processos();
 
+// Função para desalocar um processo da lista
+int desalocar_processo(int id);
+
+// Função para liberar a memória alocada para um processo
+void liberar_processo();
+
 #endif

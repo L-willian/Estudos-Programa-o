@@ -59,6 +59,36 @@ int main()
 
             break;
 
+        case 2:
+        {
+            // Liberar processo
+            int id_processo;
+
+            printf("Digite o ID do processo a ser liberado: \n");
+            scanf("%d", &id_processo);
+
+            if (id_processo <= 0)
+            {
+                printf("ID de processo inválido.\n");
+                break;
+            }
+            int resultado = desalocar_processo(id_processo);
+            if (resultado == 1)
+            {
+                liberar_memoria(id_processo);
+                printf("Processo %d liberado.\n", id_processo);
+            }
+            else if (resultado == 0)
+            {
+                printf("Processo %d já está inativo.\n", id_processo);
+            }
+            else
+            {
+                printf("Processo %d não encontrado.\n", id_processo);
+            }
+            break;
+        }
+
         case 3:
             // Listar Processos
             listar_processos();
@@ -71,6 +101,9 @@ int main()
     }
     // Loop do menu
     while (opcao != 5);
+
+    // Liberar memória alocada para os processos antes de sair
+    liberar_processo();
 
     return 0;
 }

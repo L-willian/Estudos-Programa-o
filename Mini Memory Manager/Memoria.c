@@ -9,7 +9,7 @@
 #define TAM_MEMORIA 1024
 
 // Memoria principal
-char memoria[TAM_MEMORIA];
+int memoria[TAM_MEMORIA];
 
 // Função para mostrar o mapa de memória
 void mostrar_memoria()
@@ -17,7 +17,7 @@ void mostrar_memoria()
     printf("Mapa de Memória:\n");
     for (int i = 0; i < TAM_MEMORIA; i++)
     {
-        printf("%c", memoria[i] ? '#' : '.');
+        printf("%d", memoria[i] ? 1 : 0);
     }
     printf("\n");
 }
@@ -55,10 +55,24 @@ int alocar_memoria(int tamanho, int id)
     return -1;
 }
 
+// Função para inicializar a memória
+
 void inicializar_memoria()
 {
     for (int i = 0; i < TAM_MEMORIA; i++)
     {
         memoria[i] = 0;
+    }
+}
+
+// Função para liberar memória de um processo
+void liberar_memoria(int id)
+{
+    for (int i = 0; i < TAM_MEMORIA; i++)
+    {
+        if (memoria[i] == id)
+        {
+            memoria[i] = 0; // Marca a memória como livre
+        }
     }
 }

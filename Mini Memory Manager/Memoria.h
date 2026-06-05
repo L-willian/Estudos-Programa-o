@@ -11,4 +11,10 @@ int alocar_memoria(int tamanho, int id);
 // inicializar memoria
 void inicializar_memoria();
 
+// Liberar memoria
+void liberar_memoria(int id);
+
+// Prototipo das funções de processo
+int desalocar_processo(int id);
+
 #endif
