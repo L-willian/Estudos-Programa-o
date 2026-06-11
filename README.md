@@ -67,22 +67,24 @@ Estudos-Programação/
 
 ### 3. **Cifra de César** 🔒
    
-   **Descrição:** Implementação de criptografia clássica com Cifra de César
+   **Descrição:** Implementação completa de criptografia clássica com Cifra de César
    
    **Tecnologias:** C (ANSI C)
    
-   **Funcionalidades Planejadas:**
-   - Criptografar mensagens
-   - Descriptografar mensagens
-   - Customização de chave de deslocamento
-   - Suporte a texto com espaços e pontuação
+   **Funcionalidades:**
+   - ✅ Criptografar mensagens com deslocamento de 3 posições
+   - ✅ Descriptografar mensagens (reversão do deslocamento)
+   - ✅ Suporte a todos os caracteres ASCII
+   - ✅ Programas independentes para cada função (Criptografando.c, Descriptografando.c)
+   - ✅ Leitura interativa de entrada do usuário
    
-   **Status:** 🔧 Em Desenvolvimento
+   **Status:** ✅ Funcional e Completo
    
    **Próximos Passos:**
-   - Implementar funções principais
-   - Interface de usuário
-   - Menu interativo
+   - Implementar chave dinâmica (entrada do usuário)
+   - Menu unificado com ambas funcionalidades
+   - Suporte apenas ao alfabeto (ignorar símbolos)
+   - Análise de frequência para quebra de cifra
    
    📖 [Documentação Completa](Cifra%20de%20C%C3%A9sar/README.md)
 
@@ -111,10 +113,12 @@ cd "Gerador de Senha"
 gcc -Wall -std=c99 -o Gerador-de-senha Gerador-de-senha.c
 ./Gerador-de-senha
 
-# Cifra de César (em desenvolvimento)
+# Cifra de César
 cd "Cifra de César"
-gcc -Wall -std=c99 -o cifra Criptografando.c
-./cifra
+gcc -Wall -std=c99 -o Criptografando Criptografando.c
+gcc -Wall -std=c99 -o Descriptografando Descriptografando.c
+./Criptografando   # Para criptografar
+./Descriptografando # Para descriptografar
 ```
 
 ### Navegar entre Projetos
@@ -139,14 +143,15 @@ Cada pasta de projeto contém seu próprio `README.md` com:
 - ✅ Criado Gerador de Senha
 - ✅ Geração de senhas aleatórias com 4 tipos de caracteres
 - ✅ Documentação completa do Gerador de Senha
-- ✅ Criado projeto Cifra de César (em desenvolvimento)
-- ✅ Documentação completa do repositório principal
+- ✅ Implementado projeto Cifra de César (funcional e completo)
+- ✅ Programas de criptografia e descriptografia
+- ✅ Documentação profissional de todos os projetos
 
 ## 🎓 Áreas de Aprendizado
 
 - [x] Gerenciamento de memória
-- [x] Geração de senhas simples
-- [ ] Criptografia
+- [x] Geração de números aleatórios
+- [x] Criptografia
 - [ ] Estruturas de dados avançadas
 - [ ] Algoritmos de otimização
 - [ ] Programação orientada a objetos
@@ -181,6 +186,6 @@ Projetos fornecidos para fins educacionais.
 ---
 
 **Última Atualização:** Junho 2026  
-**Versão do Repositório:** 1.0
+**Versão do Repositório:** 1.3
 
 ✨ *Cada projeto é um passo na jornada do aprendizado em programação.*
