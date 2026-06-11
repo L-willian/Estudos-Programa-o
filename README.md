@@ -150,7 +150,7 @@ Cada pasta de projeto contém seu próprio `README.md` com:
 ## 🎓 Áreas de Aprendizado
 
 - [x] Gerenciamento de memória
-- [x] Geração de números aleatórios
+- [x] Geração de senhas aleatórias
 - [x] Criptografia
 - [ ] Estruturas de dados avançadas
 - [ ] Algoritmos de otimização
